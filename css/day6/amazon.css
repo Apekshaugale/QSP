@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#container{
+    height: 700px;
+    width: 100%;
+    border: 2px solid black;
+    flex: 1;
+}
+#container>img{
+    width: 100%;
+    height: 700px;
+    
+}
+#cardcontainer{
+    height: 400px;
+    width: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 300px;
+}
+.box{
+    width:300px ;
+    height: 340px;
+    /* border: 2px black solid; */
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    flex-direction:row;
+    padding:15px;
+}
+.articaldivbox1,.articaldivbox2{
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+}
+/* .divpara1,.divpara2{
+    border: 2px solid red;
+    width: 100px;
+    height: 5vh;
+} */
+.articalimg{
+    width: 120px;
+    height: 120px;
+}
+.nav1{
+    width: 100%;
+    height: 8vh;
+    background-color: rgb(33, 33, 41);
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    gap:10px;
+}
+.amazon{
+    height: 15vh;
+    width: 100px;
+
+}
+section{
+    /* border:solid red;  */
+    height: 8vh;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.location{
+    width: 15px;
+    height: 20px;
+}
+input{
+    height:5vh;
+    width: 1000px;
+
+}
+.navsection1,.navsection2{
+    width: 200px;
+}
+.navsection3{
+    width: 800px;
+}
+.navsection4{
+    width: 300px;
+    gap:10px
+}
+select{
+    height:5vh;
+    background-color: rgb(213, 213, 213);
+    
+}
+.svg1{
+    height:5vh;
+    width: 40px;
+    background-color: rgb(244, 194, 129);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav2{
+    width: 100%;
+    height: 5vh;
+    background-color: rgb(47, 47, 64);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    gap:10px;
+}
+.nav2section{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    width: 70%;
+    height: 5vh; 
+
+}
+.nav2section2{
+    display: flex;
+    align-items: center;
+     height: 5vh;
+}
+svg{
+    height: 5vh;
+    width: 20px;
+}
+.nav2sec2div{
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    align-items: center;
+    height: 5vh;
+    width: 30%;
+    font-size: large;
+    /* border: solid red; */
+    gap: 10px;
+
+}
+/* .nav1,.nav2:hover{
+    color: beige;
+} */
+ /* ====================== NAVBAR 1 ====================== */
+
+.navsection1,
+.navsection2,
+.navsection3,
+.navsection4{
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+    cursor: pointer;
+}
+
+.navsection1:hover,
+.navsection2:hover,
+.navsection4:hover{
+    border-color: #fff;
+}
+
+/* Search section */
+.navsection3{
+    border:2px solid transparent;
+    border-radius:4px;
+}
+
+.navsection3:hover{
+    border-color:#ff9900;
+}
+
+
+/* ====================== NAVBAR 2 ====================== */
+
+.nav2section > div,
+.nav2sec2div{
+    border:1px solid transparent;
+    box-sizing:border-box;
+    transition:border-color .2s ease;
+    cursor:pointer;
+}
+
+.nav2section > div:hover,
+.nav2sec2div:hover{
+    border-color:#fff;
+}

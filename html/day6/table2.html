@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      th,
+      td {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+    <table
+      border="1"
+      style="border-collapse: collapse; width: 50%; text-align: center"
+    >
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Discount</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mobile</td>
+          <td>79,999</td>
+          <td>30%</td>
+          <td>7</td>
+          <td>20000</td>
+        </tr>
+        <tr>
+          <td>AC</td>
+          <td>56,7377</td>
+          <td>50%</td>
+          <td>5</td>
+          <td>42000</td>
+        </tr>
+        <tr>
+          <td>Fridge</td>
+          <td>88,7377</td>
+          <td>70%</td>
+          <td>12</td>
+          <td>70000</td>
+        </tr>
+      </tbody>
+    </table>-->
+    <table>
+      <tr>
+        <!--table>tr*3>td*5>{text$}-->
+       <!--- <td>text1</td>
+        <td>text2</td>
+        <td>text3</td>
+        <td>text4</td>
+        <td>text5</td>
+      </tr>
+      <tr>
+        <td>text1</td>
+        <td>text2</td>
+        <td>text3</td>
+        <td>text4</td>
+        <td>text5</td>
+      </tr>
+      <tr>
+        <td>text1</td>
+        <td>text2</td>
+        <td>text3</td>
+        <td>text4</td>
+        <td>text5</td>
+      </tr>
+      <div id="mianDiv">
+        <p class="para1">hello</p>
+      </div>
+      <table>
+        <tr>
+            <td><img src="" alt=""></td>
+            <td><img src="" alt=""></td>
+            <td><img src="" alt=""></td>
+            <td><img src="" alt=""></td>
+            <td><img src="" alt=""></td>
+        </tr>
+        <tr>
+            <td><img src="" alt=""></td>
+            <td><img src="" alt=""></td>
+            <td><img src="" alt=""></td>
+            <td><img src="" alt=""></td>
+            <td><img src="" alt=""></td>
+        </tr>
+        <tr>
+            <td><img src="" alt=""></td>
+            <td><img src="" alt=""></td>
+            <td><img src="" alt=""></td>
+            <td><img src="" alt=""></td>
+            <td><img src="" alt=""></td>
+        </tr>
+        <tr>
+            <td><img src="" alt=""></td>
+            <td><img src="" alt=""></td>
+            <td><img src="" alt=""></td>
+            <td><img src="" alt=""></td>
+            <td><img src="" alt=""></td>
+        </tr>
+        <tr>
+            <td><img src="" alt=""></td>
+            <td><img src="" alt=""></td>
+            <td><img src="" alt=""></td>
+            <td><img src="" alt=""></td>
+            <td><img src="" alt=""></td>
+        </tr> spanning is always left to right and top to bottom-->
+        <table border="1">
+            <tr>
+                <td>Product Name</td>
+                <td>Price</td>
+                <td>Discount</td>
+                <td>Quantity</td>
+                <td>Total</td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td rowspan="2">1000</td>
+                <td>5</td>
+                <td>3</td>
+                <td>899</td>
+            </tr>
+            <tr>
+                <td>AC</td>
+                <!--<td>1000</td>-->
+                <td colspan="2">3</td>
+                <!--<td>3</td>-->
+                <td>894</td>
+            </tr>
+            <tr>
+                <td>TV</td>
+                <td>500</td>
+                <td>2</td>
+                <td>4</td>
+                <td>300</td>
+            </tr>
+        </table>
+      </table>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+*{
+   padding: 0;
+   margin: 0;
+   font-family: sans-serif;
+   box-sizing: border-box; 
+}
+body{
+    background:url(./assets/the_netflix_login_background__canada__2024___by_logofeveryt_dh0w8qv.jpg);
+background-size:cover;
+    position:relative;
+    
+}
+nav{
+    margin: 15px;
+    height: 10vh;
+    /* border: red solid; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+img{
+    
+    height: 12vh;
+    
+}
+button{
+    background-color: red;
+    color: white;
+    border-radius:8px;
+ height: 40px;
+ width: 60px;
+
+}
+.navsection2{
+    display: flex;
+    justify-content: space-around;
+
+    width: 20%;
+    align-items: center;
+    gap:8px;
+    border-radius:4px;
+    
+}
+.navsec2div{
+    height: 40px;
+ width: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    gap:4px
+}
+select{
+    background-color: black;
+    color: white;
+    font-size:15px;
+}
+
+main{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+.mainsection1{
+/* align-items: center; */
+display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    gap:20px;
+    color:white;
+
+}
+.mainsection2{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+input{
+/* border-radius:8px; */
+ height: 40px;
+ width: 200px;
+}
+#get{
+   width: 100px;
+   border-radius: 0px;
+}

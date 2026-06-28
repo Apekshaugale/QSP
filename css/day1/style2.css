@@ -1,0 +1,25 @@
+div{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(147, 118, 173);
+    border-radius: 50 %;
+    display: flex;
+  align-items:center ;
+  justify-content: center;
+ 
+}
+#div2{ 
+    /* for creating id */
+    background: rgb(5, 59, 35);
+    border-radius: 50;
+}
+.divs{
+/* for creating class */
+border-radius: 50%;
+background-color: aqua;
+height: 200px;
+width: 200px;
+ display: flex;
+ align-items:center ;
+justify-content: center;
+}

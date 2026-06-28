@@ -1,0 +1,8 @@
+/* universal selectors */ less priority,idthen 
+ *{
+    color: pink;
+}
+/* grouping selctors
+.div,main {
+    color: aqua;
+} */

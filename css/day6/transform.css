@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#box{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    transition-duration: 1s;
+    border-radius: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* transition-delay: 2s; */
+}
+#box:hover{
+    /* height: 400px;
+    width: 400px; */
+    /* transform: scale(2); */
+    /* transform: scale(1); 1*200pxfor height and width for increasing size on hover.if we give 0.1 for decreasing*/
+/* transform: rotate(3600deg) scale(2); */
+/* transform: translate(-300px,200px); */
+transform: skew(100deg);
+/* skew is used for stretch and rotate the element */
+
+}

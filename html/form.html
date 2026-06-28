@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h1>Student Registration Form</h1>
+
+      <label for="std">Student Name:</label>
+      <input type="text" id="std" placeholder="first name" required />
+      <input type="text" id="last name" placeholder="last name" />
+      <br /><br />
+
+      <label for="fname">Father Name:</label>
+      <input type="text" id="fname" required />
+      <br /><br />
+
+      <label for="roll no">Roll no:</label>
+      <input type="text" id="roll no" required />
+      <br /><br />
+
+      <label for="dob">Date of birth:</label>
+      <input type="date" id="dob" required />
+      <br /><br />
+
+      <label for="mob">Mobile No:</label>
+      <input type="tel" id="mob"    maxlength="10" required />
+      <br /><br />
+
+      <label for="mail">Email:</label>
+      <input type="email" id="mail"   pattern=".+@gmail\.com" required />
+      <br /><br />
+      <label for="add">Address:</label>
+<textarea name="Address" id="add"  required></textarea>
+      <br /><br />
+      <label for="pin">PIN Code</label>
+      <input type="pin" id="pin" maxlength="6" pattern="'0'-'9'" required>
+      <br><br>
+
+      <label value="Gender">Gender:</label>
+      <input type="radio" id="Fem" name="Gender" />
+      <label for="Fem">Female</label>
+      <input type="radio" id="male" name="Gender"/>
+      <label for="male">Male</label>
+      <input type="radio" id="othe" name="Gender"/>
+      <label for="othe">Other</label>
+      <br /><br />
+
+      <label for="dep">Deprtment:</label>
+      <select name="Deprtment" id="dep" required>
+        <option value="" disabled selected>Select</option>
+        <option value="CSE ">CSE </option>
+        <option value="IT ">IT </option>
+        <option value="ECE ">ECE </option>
+        <option value="Civil">Civil</option>
+      </select>
+      <br /><br />
+
+      <label>Courses:</label>
+      <input type="checkbox" id="Pyt" name="Courses" value="Python" >
+      <label for="Pyt">Python</label>
+      <input type="checkbox" id="Jav"name="Courses"value="Java">
+      <label for="Jav">Java</label>
+      <input type="checkbox" id="htm" name="Courses"value="HTML">
+      <label for="htm">HTML</label>
+      <input type="checkbox" id="CSS" name="Courses"value="CSS">
+      <label for="CSS">CSS</label>
+<br /><br />
+
+<label for="photo">Photo:</label>
+<input type="file"id="photo" name="student photo" accept="image/*">
+<br /><br />
+<!-- <label for="camera">Capture Photo:</label>
+<input type="file" id="camera" name="camera" accept="image/*" capture="user"> -->
+<br /><br />
+        <button>Submit</button>
+      </div>
+    </form>
+  </body>
+</html>

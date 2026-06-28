@@ -1,0 +1,1124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apeksha Ugale — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --navy: #0a0f1e;
+        --navy2: #111827;
+        --card: #141b2d;
+        --card2: #1a2340;
+        --teal: #00d4aa;
+        --teal2: #00b89a;
+        --lavender: #a78bfa;
+        --white: #f0f4ff;
+        --muted: #8892a4;
+        --border: rgba(0, 212, 170, 0.15);
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--navy);
+        color: var(--white);
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* CIRCUIT GRID BACKGROUND */
+      .circuit-bg {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background-image:
+          linear-gradient(rgba(0, 212, 170, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 212, 170, 0.04) 1px, transparent 1px);
+        background-size: 40px 40px;
+        mask-image: radial-gradient(
+          ellipse 80% 50% at 50% 0%,
+          black 40%,
+          transparent 100%
+        );
+      }
+
+      /* NAV */
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        background: rgba(10, 15, 30, 0.85);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 0 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 64px;
+      }
+      .nav-logo {
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: var(--teal);
+        letter-spacing: -0.02em;
+        text-decoration: none; /* Added to remove underline from the link */
+      }
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+      .nav-links a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.875rem;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      .nav-links a:hover {
+        color: var(--teal);
+      }
+
+      /* SECTIONS */
+      section {
+        position: relative;
+        z-index: 1;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 5%;
+      }
+
+      /* HERO */
+      #hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding-top: 64px;
+      }
+      .hero-inner {
+        display: grid;
+        grid-template-columns: 1fr 360px;
+        gap: 4rem;
+        align-items: center;
+        width: 100%;
+        padding: 5rem 0;
+      }
+      .hero-tag {
+        display: inline-block;
+        background: rgba(0, 212, 170, 0.1);
+        border: 1px solid rgba(0, 212, 170, 0.3);
+        color: var(--teal);
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 0.35rem 0.9rem;
+        border-radius: 100px;
+        margin-bottom: 1.5rem;
+      }
+      .hero-name {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(2.8rem, 6vw, 4.5rem);
+        font-weight: 700;
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+        margin-bottom: 0.5rem;
+      }
+      .hero-name span {
+        color: var(--teal);
+      }
+      .hero-title {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1.15rem;
+        font-weight: 400;
+        color: var(--muted);
+        margin-bottom: 1.5rem;
+      }
+      .hero-summary {
+        font-size: 1rem;
+        color: #9ba8bb;
+        max-width: 520px;
+        line-height: 1.75;
+        margin-bottom: 2.5rem;
+      }
+      .hero-actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .btn-primary {
+        background: var(--teal);
+        color: var(--navy);
+        font-weight: 700;
+        font-size: 0.9rem;
+        padding: 0.75rem 1.75rem;
+        border-radius: 8px;
+        text-decoration: none;
+        transition:
+          background 0.2s,
+          transform 0.15s;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .btn-primary:hover {
+        background: var(--teal2);
+        transform: translateY(-1px);
+      }
+      .btn-outline {
+        border: 1.5px solid var(--border);
+        color: var(--white);
+        font-weight: 500;
+        font-size: 0.9rem;
+        padding: 0.75rem 1.75rem;
+        border-radius: 8px;
+        text-decoration: none;
+        transition:
+          border-color 0.2s,
+          transform 0.15s;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .btn-outline:hover {
+        border-color: var(--teal);
+        color: var(--teal);
+        transform: translateY(-1px);
+      }
+
+      /* CONTACT ICONS */
+      .contact-icons {
+        display: flex;
+        gap: 0.75rem;
+        margin-top: 2rem;
+      }
+      .contact-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition:
+          background 0.2s,
+          border-color 0.2s,
+          transform 0.15s;
+      }
+      .contact-icon:hover {
+        background: var(--card2);
+        border-color: var(--teal);
+        transform: translateY(-2px);
+      }
+      .contact-icon svg {
+        width: 20px;
+        height: 20px;
+      }
+      .contact-icon.whatsapp svg {
+        fill: #25d366;
+      }
+      .contact-icon.email svg {
+        fill: var(--teal);
+      }
+      .contact-icon.linkedin svg {
+        fill: #0a66c2;
+      }
+      .contact-icon.call svg {
+        fill: var(--lavender);
+      }
+
+      /* PHOTO */
+      .hero-photo-wrap {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .hero-photo-glow {
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(0, 212, 170, 0.18) 0%,
+          transparent 70%
+        );
+        z-index: 0;
+      }
+      .hero-photo {
+        position: relative;
+        z-index: 1;
+        width: 260px;
+        height: 310px;
+        object-fit: cover;
+        object-position: top center;
+        border-radius: 24px;
+        border: 2px solid rgba(0, 212, 170, 0.25);
+        box-shadow: 0 32px 64px rgba(0, 0, 0, 0.5);
+      }
+      .hero-cgpa-badge {
+        position: absolute;
+        bottom: -10px;
+        right: -10px;
+        z-index: 2;
+        background: var(--card2);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 0.6rem 1rem;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--teal);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      }
+      .hero-cgpa-badge span {
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 700;
+      }
+
+      /* SECTION COMMON */
+      .section-header {
+        margin-bottom: 3rem;
+      }
+      .section-eyebrow {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--teal);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+      .section-title {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+        font-weight: 700;
+        letter-spacing: -0.025em;
+      }
+      .section-divider {
+        width: 48px;
+        height: 3px;
+        background: linear-gradient(90deg, var(--teal), transparent);
+        margin-top: 1rem;
+        border-radius: 2px;
+      }
+
+      /* ABOUT SECTION */
+      #about {
+        padding: 6rem 0;
+      }
+      .about-content {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 3rem;
+        line-height: 1.8;
+        color: #9ba8bb;
+        font-size: 1.05rem;
+      }
+      .about-content p {
+        margin-bottom: 1.5rem;
+      }
+      .about-content p:last-child {
+        margin-bottom: 0;
+      }
+      .about-highlight {
+        color: var(--teal);
+        font-weight: 500;
+      }
+
+      /* SKILLS */
+      #skills {
+        padding: 6rem 0;
+      }
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+      .skill-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 1.75rem;
+        transition:
+          border-color 0.2s,
+          transform 0.2s;
+      }
+      .skill-card:hover {
+        border-color: rgba(0, 212, 170, 0.4);
+        transform: translateY(-3px);
+      }
+      .skill-card-title {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--teal);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+      .skill-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .pill {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: #cbd5e1;
+        font-size: 0.82rem;
+        font-weight: 500;
+        padding: 0.3rem 0.75rem;
+        border-radius: 6px;
+      }
+
+      /* EDUCATION */
+      #education {
+        padding: 6rem 0;
+        background: rgba(20, 27, 45, 0.4);
+      }
+      .edu-timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .edu-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 1.75rem 2rem;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 0.5rem 1rem;
+        align-items: start;
+        transition: border-color 0.2s;
+      }
+      .edu-card:hover {
+        border-color: rgba(0, 212, 170, 0.4);
+      }
+      .edu-degree {
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 600;
+        font-size: 1.05rem;
+      }
+      .edu-school {
+        color: var(--muted);
+        font-size: 0.88rem;
+        margin-top: 0.2rem;
+      }
+      .edu-score {
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: var(--teal);
+        text-align: right;
+      }
+      .edu-board {
+        color: var(--muted);
+        font-size: 0.78rem;
+        text-align: right;
+      }
+
+      /* PROJECTS */
+      #projects {
+        padding: 6rem 0;
+      }
+      .project-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 2.5rem;
+        transition:
+          border-color 0.2s,
+          transform 0.2s;
+        max-width: 800px;
+      }
+      .project-card:hover {
+        border-color: rgba(0, 212, 170, 0.5);
+        transform: translateY(-4px);
+      }
+      .project-badge {
+        display: inline-block;
+        background: rgba(0, 212, 170, 0.1);
+        border: 1px solid rgba(0, 212, 170, 0.3);
+        color: var(--teal);
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 0.25rem 0.7rem;
+        border-radius: 6px;
+        margin-bottom: 1rem;
+      }
+      .project-title {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1.35rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+      }
+      .project-desc {
+        color: #9ba8bb;
+        line-height: 1.75;
+        margin-bottom: 1.5rem;
+      }
+      .project-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1.75rem;
+      }
+      .tech-tag {
+        background: rgba(167, 139, 250, 0.1);
+        border: 1px solid rgba(167, 139, 250, 0.2);
+        color: var(--lavender);
+        font-size: 0.78rem;
+        font-weight: 500;
+        padding: 0.25rem 0.65rem;
+        border-radius: 6px;
+      }
+      .project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        color: var(--teal);
+        font-size: 0.88rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: gap 0.2s;
+      }
+      .project-link:hover {
+        gap: 0.7rem;
+      }
+
+      /* CERTIFICATIONS */
+      #certifications {
+        padding: 6rem 0;
+        background: rgba(20, 27, 45, 0.4);
+      }
+      .cert-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.25rem;
+      }
+      .cert-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 1.75rem;
+        display: flex;
+        flex-direction: column;
+        transition:
+          border-color 0.2s,
+          transform 0.2s;
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+      }
+      .cert-card:hover {
+        border-color: rgba(0, 212, 170, 0.4);
+        transform: translateY(-3px);
+      }
+      .cert-issuer {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--teal);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 0.6rem;
+      }
+      .cert-name {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+        line-height: 1.4;
+      }
+      .cert-date {
+        color: var(--muted);
+        font-size: 0.82rem;
+        margin-bottom: 1rem;
+      }
+      .cert-desc {
+        color: #9ba8bb;
+        font-size: 0.85rem;
+        line-height: 1.65;
+        flex: 1;
+      }
+      .cert-action {
+        margin-top: 1.25rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--teal);
+        transition: gap 0.2s;
+      }
+      .cert-card:hover .cert-action {
+        gap: 0.7rem;
+      }
+
+      /* FOOTER */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 2.5rem 5%;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      /* SCROLL REVEAL */
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* MOBILE */
+      @media (max-width: 768px) {
+        .hero-inner {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .hero-photo-wrap {
+          order: -1;
+        }
+        .hero-summary {
+          margin: 0 auto 2rem;
+        }
+        .hero-actions {
+          justify-content: center;
+        }
+        .contact-icons {
+          justify-content: center;
+        }
+        .nav-links {
+          display: none;
+        }
+        .edu-card {
+          grid-template-columns: 1fr;
+        }
+        .edu-score,
+        .edu-board {
+          text-align: left;
+        }
+        .about-content {
+          padding: 2rem 1.5rem;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circuit-bg"></div>
+
+    <!-- NAV -->
+    <nav>
+      <!-- Changed div to an anchor tag pointing to index.html -->
+      <a href="#hero" class="nav-logo">AU</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <div class="hero-tag">Computer Science &amp; Engineering</div>
+            <h1 class="hero-name">Apeksha<br /><span>Ugale</span></h1>
+            <p class="hero-title">
+              ML &amp; IoT Engineer · Software Developer · Final Year Student
+            </p>
+            <p class="hero-summary">
+              Motivated CSE student with a strong foundation in Machine
+              Learning, software development, and IoT systems. I design and
+              implement end-to-end technical solutions using Python, C, and AI
+              frameworks — ready to contribute to innovative engineering
+              projects.
+            </p>
+
+            <div class="hero-actions">
+              <!-- Resume download — place your resume PDF at the same folder and name it "Apeksha_Ugale_Resume.pdf" -->
+              <a
+                href="./Apeksha_Ugale_Resume.docx"
+                download
+                class="btn-primary"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                Download Resume
+              </a>
+              <a
+                href="https://drive.google.com/drive/folders/1e7n-i6c-wgyNvAkc0vsrrqZMyImXZucF?usp=drive_link"
+                class="btn-outline"
+                >View Projects →</a
+              >
+            </div>
+
+            <!-- CONTACT ICONS -->
+            <div class="contact-icons">
+              <!-- WhatsApp — replace number with your actual number -->
+              <a
+                href="https://wa.me/919322739587"
+                target="_blank"
+                rel="noopener"
+                class="contact-icon whatsapp"
+                title="WhatsApp"
+              >
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                  />
+                </svg>
+              </a>
+
+              <!-- Email -->
+              <a
+                href="mailto:apekshaugale2020@gmail.com"
+                class="contact-icon email"
+                title="Email"
+              >
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                  />
+                </svg>
+              </a>
+
+              <!-- LinkedIn -->
+              <a
+                href="https://linkedin.com/in/apeksha-ugale-1564a3284"
+                target="_blank"
+                rel="noopener"
+                class="contact-icon linkedin"
+                title="LinkedIn"
+              >
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+
+              <!-- Call -->
+              <a
+                href="tel:+919322739587"
+                class="contact-icon call"
+                title="Call"
+              >
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-photo-wrap">
+            <div class="hero-photo-glow"></div>
+            <img src="./my image.png" alt="Apeksha Ugale" class="hero-photo" />
+            <div class="hero-cgpa-badge">CGPA<span>8.7</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Introduction</p>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="about-content reveal">
+          <p>
+            Hello! I am <span class="about-highlight">Apeksha Ugale</span>, a
+            passionate and highly motivated Computer Science and Engineering
+            graduate with a strong interest in Artificial Intelligence, Machine
+            Learning, IoT, and Data Science.
+          </p>
+          <p>
+            I enjoy solving real-world problems using technology and
+            continuously enhancing my technical skills in
+            <span class="about-highlight">Python, C, HTML, SQL, GitHub</span>,
+            and data-driven technologies.
+          </p>
+          <p>
+            I also have practical knowledge of Data Science libraries such as
+            <span class="about-highlight"
+              >Pandas, NumPy, Matplotlib, and Seaborn</span
+            >
+            for data analysis, visualization, and extracting meaningful insights
+            from data.
+          </p>
+          <p>
+            I have completed my Bachelor of Engineering in Computer Science and
+            Engineering with a <span class="about-highlight">CGPA of 8.7</span>.
+            During my academic journey, I worked on innovative projects such as
+            an IoT-enabled motion control and position monitoring system
+            integrated with Machine Learning for real-time robotic control.
+          </p>
+          <p>
+            Aspiring to build a successful career as a
+            <span class="about-highlight">Data Science Professional</span>, I am
+            eager to explore emerging technologies, contribute to innovative
+            projects, and continuously grow in the fields of Artificial
+            Intelligence, Machine Learning, and Data Science.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Expertise</p>
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <div class="skill-card-title">Languages</div>
+            <div class="skill-pills">
+              <span class="pill">Python</span>
+              <span class="pill">C</span>
+              <span class="pill">HTML</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-card-title">Tools &amp; Platforms</div>
+            <div class="skill-pills">
+              <span class="pill">VS Code</span>
+              <span class="pill">Arduino</span>
+              <span class="pill">Power BI</span>
+              <span class="pill">Jupyter Notebook</span>
+              <span class="pill">GitHub</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-card-title">Domains</div>
+            <div class="skill-pills">
+              <span class="pill">Machine Learning</span>
+              <span class="pill">IoT Systems</span>
+              <span class="pill">Data Analytics</span>
+              <span class="pill">Embedded Systems</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-card-title">Soft Skills</div>
+            <div class="skill-pills">
+              <span class="pill">Communication</span>
+              <span class="pill">Teamwork</span>
+              <span class="pill">Problem Solving</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Academic Background</p>
+          <h2 class="section-title">Education</h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="edu-timeline">
+          <div class="edu-card reveal">
+            <div>
+              <div class="edu-degree">
+                B.E. in Computer Science &amp; Engineering
+              </div>
+              <div class="edu-school">
+                Sant Gadge Baba Amravati University — PRMCEAM
+              </div>
+            </div>
+            <div>
+              <div class="edu-score">8.7 / 10</div>
+              <div class="edu-board">CGPA</div>
+            </div>
+          </div>
+          <div class="edu-card reveal">
+            <div>
+              <div class="edu-degree">Higher Secondary Certificate (HSC)</div>
+              <div class="edu-school">
+                S.B. Jr. Science College, Telhara — Maharashtra State Board
+              </div>
+            </div>
+            <div>
+              <div class="edu-score">81.82%</div>
+              <div class="edu-board">HSC</div>
+            </div>
+          </div>
+          <div class="edu-card reveal">
+            <div>
+              <div class="edu-degree">Secondary School Certificate (SSC)</div>
+              <div class="edu-school">
+                S.B. High School, Telhara — Maharashtra State Board
+              </div>
+            </div>
+            <div>
+              <div class="edu-score">91.60%</div>
+              <div class="edu-board">SSC</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Work</p>
+          <h2 class="section-title">Projects</h2>
+          <div class="section-divider"></div>
+        </div>
+        <!--
+      HOW TO LINK YOUR PROJECT FOLDER:
+      Replace href="#" below with your project folder path or GitHub repo URL.
+      Example: href="projects/iot-motion-control/" or href="https://github.com/yourname/project"
+    -->
+        <div class="project-card reveal">
+          <div class="project-badge">Final Year Project</div>
+          <h3 class="project-title">
+            IoT-Enabled Motion Control &amp; Position Monitoring System
+          </h3>
+          <p class="project-desc">
+            Designed and implemented an IoT-enabled position monitoring system
+            and robotic arm leveraging the MPU-9250 IMU sensor, Raspberry Pi
+            Zero 2W, and ESP32 microcontroller. Integrated Machine Learning
+            algorithms with Python and C to enable real-time motion tracking,
+            multi-axis control, and remote data visualization.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">C</span>
+            <span class="tech-tag">Raspberry Pi Zero 2W</span>
+            <span class="tech-tag">ESP32</span>
+            <span class="tech-tag">MPU-9250 IMU</span>
+            <span class="tech-tag">Machine Learning</span>
+            <span class="tech-tag">IoT</span>
+          </div>
+          <!--
+        Replace href below:
+        • Local folder: href="projects/iot-motion-control/index.html"
+        • GitHub:       href="https://github.com/yourusername/iot-motion-control"
+      -->
+          <a
+            href="https://drive.google.com/drive/folders/1e7n-i6c-wgyNvAkc0vsrrqZMyImXZucF?usp=drive_link"
+            target="_blank"
+            class="project-link"
+          >
+            View Project Folder
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Credentials</p>
+          <h2 class="section-title">Certifications</h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="cert-grid">
+          <!--
+        Replace href values below with actual paths to your certificate files/folders.
+        Examples:
+        • Local PDF:  href="certificates/deloitte-data-analytics.pdf"
+        • Local folder: href="certificates/deloitte/"
+      -->
+          <a
+            href="https://drive.google.com/file/d/19TrTebwKALtHX5m81VnaaHuAdtH3GP-H/view?usp=drive_link"
+            target="_blank"
+            class="cert-card reveal"
+          >
+            <div class="cert-issuer">Deloitte via Forage</div>
+            <div class="cert-name">Data Analytics Job Simulation</div>
+            <div class="cert-date">June 2025</div>
+            <div class="cert-desc">
+              Completed practical tasks in Data Analysis and Forensic
+              Technology.
+            </div>
+            <div class="cert-action">
+              Open Certificate
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="13"
+                height="13"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </div>
+          </a>
+
+          <a
+            href="https://drive.google.com/file/d/1tqGHZdByKJMeewchU4NEXGbpJpcNy8fe/view?usp=drive_link"
+            target="_blank"
+            class="cert-card reveal"
+          >
+            <div class="cert-issuer">Edunet Foundation &amp; AICTE</div>
+            <div class="cert-name">
+              Green Skills and Artificial Intelligence
+            </div>
+            <div class="cert-date">January 2026</div>
+            <div class="cert-desc">
+              Completed Foundation course under the Skills 4 Future Program.
+            </div>
+            <div class="cert-action">
+              Open Certificate
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="13"
+                height="13"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </div>
+          </a>
+
+          <a
+            href="https://drive.google.com/file/d/1tbx1Tht4pG9lCy87XjH4YSn3QvObluGS/view?usp=drive_link"
+            target="_blank"
+            class="cert-card reveal"
+          >
+            <div class="cert-issuer">Eduskill</div>
+            <div class="cert-name">AI-ML Virtual Internship</div>
+            <div class="cert-date">2025</div>
+            <div class="cert-desc">
+              Completed AI and Machine Learning virtual internship program.
+            </div>
+            <div class="cert-action">
+              Open Certificate
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="13"
+                height="13"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        Designed &amp; built by Apeksha Ugale &nbsp;·&nbsp; Pune, Maharashtra,
+        India
+      </p>
+    </footer>
+
+    <script>
+      // Scroll reveal
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+              observer.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>

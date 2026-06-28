@@ -1,0 +1,97 @@
+/* //!task1 */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+ /* div{
+    background-color: rgb(12, 58, 98);
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+span{
+    background-color: rgb(128, 176, 219);
+}
+/* //!task2 */
+/* .main{
+    display: flex;
+}
+.div2{
+background-color: aqua;
+display: inline;
+padding:10px;
+border: 1px solid;
+}   */
+/* //!task6*/
+/* p{
+/* display: inline-block; */
+
+/* //!task7*/
+/* div{
+    display: inline;
+    padding: 20px;
+border: 2px;
+background-color: blanchedalmond;
+} */
+nav{
+    background-color: rgb(13, 41, 41);
+display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    height: 5vh;
+    color: azure;
+    align-items: center;
+}
+main{
+    display: flex;
+    
+}
+aside{
+width: 100px;
+    height: 95vh;
+    background-color: rgb(9, 69, 82);
+display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+div:hover{
+    
+    background-color: rgb(25, 140, 165);
+    cursor: pointer;
+}
+div{
+    background-color: rgb(52, 86, 120);
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: aliceblue;
+}
+p:hover{
+    
+    background-color: rgb(133, 144, 147);
+    cursor: pointer;
+}
+h1{
+    align-items: center;
+font-style: italic;
+color: brown;
+font-size: medium;
+}
+.sectionA{
+display: flex;
+justify-content: space-between;
+background-color: aqua;
+/* height: 50vh; */
+flex-direction: row;
+margin: 20px;
+width: 50%;
+}
+section{
+    display: flex;
+    flex-direction: column;
+justify-content: center;
+}

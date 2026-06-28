@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+main{
+    
+    width: 40px;
+    height: 100vh;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.div1{
+    height: 60%;
+    border: 2px solid red;
+}
+.div2{
+    height:  20%;
+    border: 2px solid red;
+}

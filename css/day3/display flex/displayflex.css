@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /* background-color: aliceblue; */
+}
+main{
+    width: 40px;
+    height: 90vh;
+    background-color: rgb(19, 23, 23);
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column;
+align-items: center;
+/* border:1px rgb(17, 133, 190) solid; */
+}
+.divmain{
+    /* width: 40px; */
+    height:60% ;
+    /* border: red solid; */
+     display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    /* align-items: start; */
+
+}
+.divmain1{
+    /* width: 40px; */
+    height:20% ;
+    /* border: red solid; */
+    display: flex;
+flex-direction: column; 
+    justify-content: space-around;
+    
+    /* align-items: center; */
+}
+.opt,.opt1{
+    width: 30px;
+    height:30px ;
+    /* border:1px rgb(8, 95, 12) solid; */
+     display: flex; 
+   justify-content: center;
+   align-items: center;
+  
+}
+
+/* .opt1{
+    width: 30px;
+    height:30px ;
+    border:1px rgb(8, 95, 12) solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+nav{
+    /* width: 100%; */
+    height: 5vh;
+display: flex;
+justify-content: center;
+    background-color: rgb(27, 37, 37);
+    /* border:1px rgb(17, 133, 190) solid; */
+    flex-direction: row;
+    align-items: center;
+
+}
+footer{
+    /* width: 100%; */
+    height: 5vh;
+display: flex;
+justify-content: center;
+    background-color: rgb(33, 39, 39);
+    /* border:1px rgb(17, 133, 190) solid; */
+    flex-direction: row;
+
+}
+.navdiv{
+    /* height: 40px; */
+    width: 60%;
+    /* border: red solid; */
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    
+}
+.navdiv1{
+    /* height: 40px; */
+    width: 60%;
+    /* border: red solid; */
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    
+}
+.navopt,.navopt1{
+    width: 60px;
+    height:20px ;
+    /* border:  1px rgb(8, 95, 12) solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: rgb(142, 154, 165);
+    
+}
+/* .navopt1{
+    width: 20px;
+    height:20px ;
+    border:1px  rgb(8, 95, 12) solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+ body{
+background-color: rgb(50, 55, 58);
+ }
+.divfoot{
+    /* height: 40px; */
+    width: 60%;
+    /* border: red solid; */
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.footcl{
+    width: 60px;
+    height:20px ;
+    /* border:  1px rgb(8, 95, 12) solid; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 12px;
+}
