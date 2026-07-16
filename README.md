@@ -11,10 +11,10 @@ This repository serves as a personal learning journal where I regularly upload c
 
 📂 Daily-Coding-Practice
 │
-├── 📁 python
-├── 📁 java
-├── 📁 html
 ├── 📁 css
+├── 📁 html
+├── 📁 java
+├── 📁 python
 └── 📄 README.md
 
 
