@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yuyu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./1.css">
+    <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+     crossorigin="anonymous"
+     referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="overflow-hidden">
+    <nav class="bg-black flex items-center justify-between px-4 py-3 flex-wrap gap-4">
+       <section class="text-white text-4xl">
+        <i class="fa-brands fa-spotify"></i>
+       </section>
+       <section class="flex items-center text-white gap-4 flex-1 justify-center">
+        <article class="text-white bg-[#2a2a2a]  text-2xl flex justify-center items-center rounded-4xl w-[50px] h-[50px]">
+            <i class="fa-solid fa-house"></i>
+        </article>
+        <article class="flex  bg-[#2a2a2a]  h-[6vh] w-[20vw] rounded-[50px] justify-between px-[20px] items-center" >
+            <div> <i class="fa-solid fa-magnifying-glass"></i></div>
+            <div>
+                <input type="text " class="w-[14vw] outline-none border-r-[1px] border-r-white" placeholder="What do you want to play?">
+            </div>
+            <div><i class="fa-regular fa-window-maximize"></i></div>
+        </article>
+       </section>
+       <section class="text-white flex items-center gap-[20px]">
+        <article class="flex items-center gap-[20px] border-r-[1px] border-r-white pr-[20px]">
+            <div>Premium</div>
+            <div>Support</div>
+            <div>Download</div>
+
+        </article>
+        <article class="flex items-center gap-[20px]">
+            <div><i class="fa-regular fa-circle-down"></i> Install App</div>
+            <div>Sign up</div>
+            <div>
+                <button class="bg-white text-black rounded-full w-[130px] font-bold h-[6vh]">
+                    Log in
+                </button>
+            </div>
+
+        </article>
+
+       </section>
+    </nav>
+   <main class="flex flex-col lg:flex-row gap-4 bg-black p-3 h-[calc(100vh-70px)]">
+       
+       <aside class="w-full lg:w-[24%] h-auto lg:h-full rounded-2xl bg-[#121212] text-white p-4 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+
+    <div class="flex justify-between items-center mb-5">
+    <div class="flex items-center gap-3">
+      <i class="fa-solid fa-book"></i>
+      <h2 class="font-bold text-lg">Your Library</h2>
+    </div>
+
+    <button
+      class="bg-[#242424] px-4 py-2 rounded-full hover:bg-[#333] duration-200">
+      <i class="fa-solid fa-plus"></i>
+      Create
+    </button>
+  </div>
+  <div class="bg-[#242424] rounded-xl p-5 mb-4">
+    <h3 class="font-bold text-[16px]">
+      Create your first playlist
+    </h3>
+    <p class="text-sm text-gray-300 mt-2">
+      It's easy, we'll help you.
+    </p>
+    <button
+      class="mt-5 bg-white text-black px-5 py-2 rounded-full font-semibold hover:scale-105 duration-200">
+      Create playlist
+    </button>
+  </div>
+    <div class="bg-[#242424] rounded-xl p-5">
+    <h3 class="font-bold text-[16px]">
+      Let's find some podcasts to follow
+    </h3>
+
+    <p class="text-sm text-gray-300 mt-2">
+      We'll keep you updated on new episodes.
+    </p>
+
+    <button
+      class="mt-5 bg-white text-black px-5 py-2 rounded-full font-semibold hover:scale-105 duration-200">
+      Browse podcasts
+    </button>
+  </div>
+ <div class="mt-8 text-xs text-gray-400 flex flex-wrap gap-x-4 gap-y-3">
+    <span>Legal</span>
+    <span>Safety & Privacy Center</span>
+    <span>Privacy Policy</span>
+    <span>Cookies</span>
+    <span>About Ads</span>
+    <span>Accessibility</span>
+  </div>
+
+  <button
+    class="mt-8 border border-gray-500 px-5 py-2 rounded-full hover:border-white duration-200">
+    <i class="fa-solid fa-globe"></i>
+    English
+  </button>
+
+</aside>
+      <section class="w-full lg:w-[76%] rounded-2xl bg-[#121212] p-6 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <!-- overflow y auto is use for only the section scroll vertically -->
+       
+            <h1 class="text-white text-3xl font-bold mb-8">Trending Songs</h1>
+
+
+            <div class="flex gap-5 overflow-x-hidden">
+
+               <div class="w-[180px] p-3 flex-shrink-0 ">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPyswgwQhGCIm0bsYieWpLw4sd_TSSQ9MK7jIxHwB59w&s=10 " class="w-full rounded-lg hover:bg-[#1f1f1f]" alt="">
+                <h3 class="text-white font-bold">Love Dose</h3>
+                <p class="text-gray-400 font-sm">Yo Yo Honey Singh</p>
+
+              </div>
+              <div class="w-[180px] p-3 flex-shrink-0">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoTggj98N_VL9NGhLABxy5LFoLzIKXSI836XnRJ1_l8w&s" class="w-full rounded-lg hover:bg-[#1f1f1f]">
+                 <h3 class="text-white font-bold">Gehra Hua</h3>
+                 <p class="text-gray-400 font-sm">Arijit Singh,Shashwat Sachdev</p>
+
+              </div>
+              
+              <div class="w-[180px] p-3 flex-shrink-0 ">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-E5rNsUkVD3irpAqDhqX8kNnl13P3-4r0eXW1NZiNVw&s=10" class="w-full rounded-lg hover:bg-[#1f1f1f]">
+                 <h3 class="text-white font-bold">Mexico</h3>
+                 <p class="text-gray-400 font-sm">Karan Aujla</p>
+
+              </div>
+
+              
+              <div class="w-[180px] p-3 flex-shrink-0">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUzwq2wuFZVXZmO__yKXHO3JtI8xww7Y6q8HP6uGnnew&s=10" class="w-full rounded-lg hover:bg-[#1f1f1f]">
+                 <h3 class="text-white font-bold">Desi Kalakar</h3>
+                 <p class="text-gray-400 font-sm">Yo Yo Honey Singh</p>
+
+              </div>
+
+               <div class="w-[180px] p-3 flex-shrink-0 ">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRTulxV3GEy5DFopjuORWm1ymeXAE4uKlqAEqe1UDz7A&s=10" class="w-full rounded-lg hover:bg-[#1f1f1f]">
+                 <h3 class="text-white font-bold">Blue Eyes</h3>
+                 <p class="text-gray-400 font-sm">Yo Yo Honey Singh</p>
+
+              </div>
+
+               <div class="w-[180px] p-3 flex-shrink-0">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyCmcF6pXbFZiLcPXqxtC2h-o9SeklRiNRLXMuWZsdrA&s=10" class="w-full rounded-lg">
+                 <h3 class="text-white font-bold">You're U Tho</h3>
+                 <p class="text-gray-400 font-sm">Karan Aujla</p>
+
+              </div>
+
+               <div class="w-[180px] p-3 flex-shrink-0">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp10Ewq6gENnKolVbvnb4Ix3_ZM6rOCSTLiViAzaHFvA&s=10" class="w-full rounded-lg">
+                 <h3 class="text-white font-bold">Love Song </h3>
+                 <p class="text-gray-400 font-sm">Karan Aujla</p>
+
+              </div>
+              <div class="w-[180px] p-3 flex-shrink-0">
+                 <img src="https://i.ytimg.com/vi/_Eibm9eehFc/maxresdefault.jpg" class="w-full rounded-lg hover:bg-[#1f1f1f]">
+                 <h3 class="text-white font-bold">Tera Hua</h3>
+                 <p class="text-gray-400 font-sm">Arijit Singh,Shashwat Sachdev</p>
+
+              </div>
+
+           </div>
+
+            <div class="mt-12">
+
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-white text-3xl font-bold">
+        Popular Artists
+      </h2>
+
+      <p class="text-gray-400 hover:underline cursor-pointer">
+        Show all
+      </p>
+    </div>
+
+    <div class="flex gap-8">
+
+      <div class="text-center">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsP2P-YPmItM89l8L-NL-oTe6Q1iXY_Y9LZJ89zHfAww&s"
+          class="w-[150px] h-[150px] rounded-full object-cover"
+        >
+
+        <h3 class="text-white mt-3 font-semibold">
+          Arijit Singh
+        </h3>
+
+        <p class="text-gray-400 text-sm">
+          Artist
+        </p>
+      </div>
+
+      <div class="text-center">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjdRI04_GStguZm5MTr3euCHr0GQ-mA2whAp_Lx2jKqw&s"
+          class="w-[150px] h-[150px] rounded-full object-cover"
+        >
+
+        <h3 class="text-white mt-3 font-semibold">
+          Honey Singh
+        </h3>
+
+        <p class="text-gray-400 text-sm">
+          Artist
+        </p>
+      </div>
+      <div class="text-center">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjzoIkxjvImPk4zn2g2wukcdSEcWenHXZcmoo-qB_55Q&s=10"
+          class="w-[150px] h-[150px] rounded-full object-cover"
+        >
+
+        <h3 class="text-white mt-3 font-semibold">
+          Alka Yagnik
+        </h3>
+
+        <p class="text-gray-400 text-sm">
+          Artist
+        </p>
+      </div>
+      <div class="text-center">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbvTFBFAjlaYgLrXo6Ire7owJ44-UI394sRHTrUjnH0w&s=10"
+          class="w-[150px] h-[150px] rounded-full object-cover"
+        >
+
+        <h3 class="text-white mt-3 font-semibold">
+          KK
+        </h3>
+
+        <p class="text-gray-400 text-sm">
+          Artist
+        </p>
+      </div>
+      <div class="text-center">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo49hki7PSb9vHOpvIzAN_ZnYNGjerE9CILbe4M6x94w&s=10"
+          class="w-[150px] h-[150px] rounded-full object-cover"
+        >
+
+        <h3 class="text-white mt-3 font-semibold">
+          Pritam
+        </h3>
+
+        <p class="text-gray-400 text-sm">
+          Artist
+        </p>
+      </div>
+      <div class="text-center">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdBiPq0tT8qF9pIwn6KFkZJm-c7tu2up0joe0pKaGMmA&s=10"
+          class="w-[150px] h-[150px] rounded-full object-cover"
+        >
+
+        <h3 class="text-white mt-3 font-semibold">
+          Neha Kakkar
+        </h3>
+
+        <p class="text-gray-400 text-sm">
+          Artist
+        </p>
+      </div>
+    </div>
+
+
+            
+            
+            
+
+        </section>
+    </main>
+    <footer class="flex justify-between p-[10px] h-[0vh] ">
+        <p class="w-[65%]">We and our partners use cookies to personalize your experience, to show you ads based on your interests, and for measurement and analytics purposes. By using our website and services, you agree to our use of cookies as described in our Cookie Policy</p>
+        <p>
+            <i class="fa-solid fa-xmark"></i>
+        </p>
+    </footer>
+</body>
+</html>

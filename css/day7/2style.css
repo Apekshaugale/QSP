@@ -1,0 +1,21 @@
+@import "tailwindcss";
+.cards::-webkit-scrollbar{
+    display: none;
+}
+@median (max-width:600px){
+    #logo{
+        padding-left:20px;
+
+    }
+    aside{
+        display:none;
+
+    }
+    .mainContainer{
+        width:99%;
+
+    }
+    .smallCard{
+        min-width: 50%;
+    }
+}

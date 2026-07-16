@@ -1,0 +1,19 @@
+/* shadow will takes four values:such as 1.x-axis,y-axis(is opposite opsitve give negative and vicevarsa),blur
+for shadow  we are using[x,y,blur,colour]
+no negative to blur */
+@import "tailwindcss";
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* h1{
+    text-shadow: 5px 5px 10px grey;
+    border: solid;
+    padding: 30px;
+    box-shadow: 10px 10px 5px rgb(226,225,225);
+}
+h1:hover{
+    box-shadow: 0px 0px 5px rgb(226,225,225);
+} */

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <nav
+      class="flex h-[7vh] bg-gray-400 justify-between px-[20px] items-center"
+    >
+      <div class="hidden md:inline-block">LOGO</div>
+      <div>
+        <input
+          class="bg-gray-300 rounded-lg px-[10px] hidden lg:inline-block"
+          type="text"
+          placeholder="serach"
+        />
+      </div>
+      <div class="flex w-[60vw] lg:w-[40vw] justify-around">
+        <p>HOME</p>
+        <p>ABOUT</p>
+        <p>CONTACT</p>
+        <p class="hidden lg:inline-block">HELP</p>
+        <!-- when we want to see element at this range then used --xl:inline-block 
+         1.we used hidden 
+         2.make any range into inline-block
+         3.hidden always with inlineblock
+         4.we can givw width and hight-->
+        <p
+          class="inline-block md:hidden lg:bg-amber-700 xl:inline-block xl:hidden"
+        >
+          LOGOUT
+        </p>
+      </div>
+    </nav>
+  </body>
+</html>
