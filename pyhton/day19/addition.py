@@ -1,0 +1,7 @@
+num1=int(input('Enter num1:'))
+num2=int(input('Enter num2:'))
+print('Addition of two number is :',num1+num2)
+num3=complex(input('Enter num3:'))
+print('Subtraction of two number is:',num2-num3)
+num4=eval(input('Enter num4:'))
+print('Output of num4:',num3+num4)
