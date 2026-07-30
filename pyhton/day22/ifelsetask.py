@@ -58,6 +58,7 @@ else:
     rev = a[::-1]
     print(rev[0:mid+1:1])
 '''
+'''
 #27.WAP whether a given string, if string length is more than 2, then it displays a new
 #string with the first and last characters switched, otherwise the display the 3
 #copies of given string.
@@ -67,3 +68,6 @@ if len(s)>2:
     print(s[-1]+s[1:-1:1]+a[0])  #a[1:5:1]
 else:
     print(s*3)
+'''
+
+'''
