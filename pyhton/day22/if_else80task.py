@@ -226,7 +226,7 @@ else:
 #append the new string called "bye" or else print the first and last characters.
 s=eval(input('Enter the string: '))
 if len(s)%2==0:
-    print(s+'bye')
+    print(s+ ' '+'bye')
 else:
     print( f'The first character is "{s[0]}" and the last character is "{s[-1]}"')
 
@@ -252,6 +252,18 @@ if string[-1] in '@#!$%^&*(){}':
 else:
     len(string)%2!=0
     print(string[len(string)//2:] + string[:len(string)//2])
+
+ OR 
+s=eval(input('Enter the string: '))
+if  not s[-1].isalnum() :
+    rev=s[::-1]
+    print(rev)
+    print(rev[-2::-1])
+else:
+  if len(a)%2==1:
+    mid=(len(a)-1)//2
+ print(mid)
+print(a[mid]) #vn[collectiondata]
 
 
 #26.WAP to check whether the given value is present inside the given collection or
