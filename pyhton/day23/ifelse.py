@@ -51,7 +51,7 @@ times.
 '''
 s=eval(input('Enter the string:'))   
 
-if  len(s)>10 and ord(s[0])+ord(s[-1])%5:
+if  len(s)>10 and (ord(s[0])+ord(s[-1]))%5==0:
     print('first character : ',ord(s[0]))
     print('middle character :',ord(s[(len(s)-1)//2]))
     print('last character :',ord(s[-1]))
