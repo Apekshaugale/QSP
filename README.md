@@ -15,6 +15,7 @@ This repository serves as a personal learning journal where I regularly upload c
 ├── 📁 html
 ├── 📁 java
 ├── 📁 python
+├── 📁 testing manual
 └── 📄 README.md
 
 
