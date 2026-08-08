@@ -1,0 +1,231 @@
+'''
+                    #enumerate
+
+s="Hello"  #-----> 0-->H
+"""
+normal syntax :--->
+         
+    enumerate(iterable)--->inbuilt function
+         |
+         |
+    Data will convert To object address
+         |
+         |
+    Object Address Data again convert To readable format
+         |
+         |
+    Two ways---->1 -->Typecasting   2--->Looping
+         |
+         |
+    syntax for Typecasting
+    
+    list(enumerate(iterable))
+    tuple(enumerate(iterable))
+    dict(enumerate(iterable))
+    set(enumerate(iterable))
+        |
+        |
+    syntax for---> Looping
+    
+    for variable in enumerate(iterable):
+        statement
+         
+         |
+         |
+   output of enumerate function----->(Position,value)
+"""
+s="Hello"
+print(enumerate(s)) #<enumerate object at 0x000002201988D530>
+
+#way---->1  Typecasting
+print(list(enumerate(s)))
+#[(0, 'H'), (1, 'e'), (2, 'l'), (3, 'l'), (4, 'o')]
+
+print(tuple(enumerate(s)))
+#((0, 'H'), (1, 'e'), (2, 'l'), (3, 'l'), (4, 'o'))
+
+print(set(enumerate(s)))
+#{(4, 'o'), (0, 'H'), (2, 'l'), (1, 'e'), (3, 'l')}
+
+print(dict(enumerate(s)))
+#{0: 'H', 1: 'e', 2: 'l', 3: 'l', 4: 'o'}
+
+#way--->2
+for i in enumerate(s):
+    print(i)
+"""
+(0, 'H')
+(1, 'e')
+(2, 'l')
+(3, 'l')
+(4, 'o')
+
+"""
+for i,j in enumerate(s):
+    print(i,j)
+"""
+i----->Position
+j----->value
+
+Note :--> when we use two reference_variable
+          Here will get output in unpacked format
+          
+"""
+
+# k=[10,20,30,40,50]
+
+y={1:2,4:5,8:9}
+for i in enumerate(y):
+    print(i)
+'''
+
+
+
+
+
+
+
+
+"""
+*.reversed-------> inbuilt function
+
+*.In reversed if we done operation directly it will
+  show object address
+
+*.In reversed To avoid object addressdata we have
+  two ways 
+  1.Typecasting
+  2.Looping
+
+    Typecasting syntax :--->
+--------------------------------------------------
+    list(reversed(iterable))
+    tuple(reversed(iterable))
+    dict(reversed(iterable))
+    set(reversed(iterable))
+
+        Looping syntax :--->
+-----------------------------------------------
+    for variable in reversed(iterable):
+        statement 
+"""
+
+s="Python"
+'''
+Typecasting
+print(reversed(s)) #<reversed object at 0x00000252911A1420>
+print()
+print(list(reversed(s)))
+#['n', 'o', 'h', 't', 'y', 'P']
+print(tuple(reversed(s)))
+#('n', 'o', 'h', 't', 'y', 'P')
+print(set(reversed(s)))
+#{'o', 'n', 'h', 'P', 'y', 't'}
+print(dict(reversed(s))) #ValueError
+'''
+'''
+s="Python"
+for i in reversed(s):  #inbuilt function
+    print(i,end=" ")
+print()
+for i in s[::-1]:   #slicing
+    print(i,end=" ")
+print()
+s="Python"
+for i in range(-1,-len(s)-1,-1):#range()
+    print(s[i],end=" ")
+print()
+
+s="Python"
+res=" "
+for i in s:
+    res=i+res
+print(res)
+'''
+'''
+d=[1,2,3,4,5]
+
+for i in reversed(d):
+    print(i,end=" ")
+print()
+for i in d[::-1]:
+    print(i,end=" ")
+print()
+
+for i in range(-1,-len(d)-1,-1):
+    print(d[i],end=" ")
+
+d=[1,2,3,4,5]
+l=[]
+for i in d:
+    l=[i]+l
+print(l)
+'''
+'''
+#26.wap to check how many words are present
+# in the given sentence
+a="hello world sentence"
+b=a.split()
+print(b) #['hello', 'world', 'sentence']
+total=0
+for i in b:
+    total=total+1
+print(total)
+'''
+
+
+
+
+
+
+'''
+# 27.wap to create a dictionary and print the characters
+# and its Ascii value pair
+s="hello world"
+# output:--> {"h":ascii value,"e":ascii value........}
+d={}
+for i in s:
+    d.update({i:ord(i)})
+print(d)
+
+d={}
+for i in s:
+    d[i]=ord(i)
+print(d)
+'''
+'''
+# 28.wap to create a dictionary and
+# traverse into it and if the length is
+# even print as it else reverse it
+names=["apple","google","yahoo","microsoft","gmail","walmart"]
+# output:-->{'apple': 'elppa', 'google': 'google', 'yahoo': 'oohay', 'microsoft': 'tfosorcim', 'gmail': 'liamg', 'walmart': 'tramlaw'}
+d={}
+for i in names:
+    if len(i)%2==0:
+        d[i]=i
+    else:
+        d[i]=i[::-1]
+print(d)
+'''
+# 29.wap to print series of factorial(take user input)
+num=eval(input("enter the Number"))
+fact=1
+for i in range(1,num+1,1):
+    fact=fact*i
+    print(i)
+print(fact)
+"""
+fact=1
+i=1
+fact=fact*i----> fact=1*1----=1
+i=2
+fact=fact*i----> fact=1*2----=2
+
+i=3
+fact=fact*i----->fact=2*3----=6
+
+i=4
+fact=fact*i---> fact=6*4----=24
+
+i=5
+fact=fact*i---> fact=24*5---=120
