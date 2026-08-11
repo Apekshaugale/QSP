@@ -1,0 +1,107 @@
+'''s='ABC'
+for i in s:
+  print(ord(i))
+
+s='education'
+for i in s:
+   if i not in "aeiouAEIOU":
+       print(i,end='')
+
+l=['vaibhav','rahul','kapil']
+for i in l:
+
+    print(i.capitalize())
+
+s='india got the independent in the year 1947'
+alpha=0
+space=0
+num=0
+for i in  s:
+ if i.isalpha():
+    alpha=alpha+1
+ elif i.isdigit():
+     num=num+1
+ elif i.isspace():
+     space=space+1
+print(alpha)
+print(space)
+print(num)
+
+l=['hello','guys',1,23.4,5+7j,[2,3,4],True,False]
+a=0
+for i in l:
+  if isinstance(i,(int,float,bool,complex)):
+     a=i+a
+print(a)
+
+d={}
+s='hello world'
+for i in s:
+  d[i]=ord(i)
+print(d)
+
+l=['yellow','red','black','pink','orange','green','red','pink','yellow']
+a={}
+for i in l:
+  
+    a[i]=l.count(i)
+print(a)
+  
+
+a=0
+s='never give up'
+for i in s:
+   a=a+1
+print(a)
+
+s='never give up'
+for i in range(0,len(s),2):
+ print(s[i])
+
+
+s='tomorrow is weekend and non-veg special'
+d={}
+for i in s.split(' '):
+  print(i)
+  d[i]=len(i)
+print(d)
+
+
+s='sunday'
+d={}
+for i in s:
+  d[i]=i.upper()
+print(d)
+ 
+
+l=[89,51,111,77,108,120]
+a={}
+for i in l:
+  a[i]=chr(i)
+print(a)
+
+s='sunday'
+a=[]
+for i in s:
+  a.append((i,ord(i)))
+  
+print(a)
+
+'''
+
+s='hi hello good morining welcome to python session'
+d={}
+for i in s.split():
+  if i[0] not in d :
+   d[i[0]]=i
+  else:
+    
+ print(d)
+ 
+'''
+s='tommorow is weekend and nonveg special'
+a={}
+for i in s.split():
+  a[i]=i[::-1]
+print(a)
+  '''
