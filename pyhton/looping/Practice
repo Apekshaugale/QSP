@@ -1,0 +1,14 @@
+# 4.WAP to remove duplicates from the
+# list without using inbuilt function
+d=[1,2,3,4,5,6,7,1,2,3,4]
+l=[]
+for i in range(0,len(d),1):
+    if d[i] not in l:
+        l=l+[d[i]]
+print(l)  #[1, 2, 3, 4, 5, 6, 7]
+
+k=[]
+for i in d:
+    if i not in k:
+        k.append(i)
+print(k)
