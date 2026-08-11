@@ -1,0 +1,10 @@
+#1. WAP to extract only file names
+l= ['forloop.txt', 'python.py', 'while.pdf', 'functions.pptx',
+    'lambda.png', 'map.py', 'python.pdf', 'oops.py']
+
+#output:-['forloop', 'python', 'while', 'functions', 'lambda', 'map', 'oops']
+k=[]
+for i in l:
+    m=i.split(".")
+    k.append(m[1])
+print(k)
