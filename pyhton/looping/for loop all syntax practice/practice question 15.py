@@ -95,10 +95,41 @@ b='listen'
 if sorted(a)==sorted(b):
    print('its a anagram')
 else:
-    print('its not  anagram') 
+    print('its not  anagram') """
+
+#bored , robed
+a='bored'
+b='robed'
+if sorted(a)==sorted(b):
+    print('Its a anagram')
+else:
+    print('Its not a anagram')
 
 
-"""
+#cat, act
+
+a='cat'
+b='act'
+if sorted(a)==sorted(b):
+    print('Its a anagram')
+else:
+    print('Its not a anagram')
+#keep, peek
+a='keep'
+b='peek'
+if sorted(a)==sorted(b):
+    print('Its a anagram')
+else:
+    print('Its not a anagram')
+#lamp, palm
+a='lamp'
+b='palm
+if sorted(a)==sorted(b):
+    print('Its a anagram')
+else:
+    print('Its not a anagram')
+
+
 """
 6.Find the sum of even numbers from 1 to 20
 
