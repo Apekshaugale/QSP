@@ -77,16 +77,49 @@ print(sorted(b))
 if sorted(a)==sorted(b):
     print('its a anagram')
 else:
+    print('its not  anagram')
+
+a= 'tea'
+b='ate'
+print(sorted(a))
+print(sorted(b))
+if sorted(a)==sorted(b):
+    print('its a anagram')
+else:
     print('its not  anagram') 
+
+
+#silent, listen
+a='silent'
+b='listen'
+if sorted(a)==sorted(b):
+   print('its a anagram')
+else:
+    print('its not  anagram') 
+
 
 """
 """
 6.Find the sum of even numbers from 1 to 20
+
+s=0
+for i in range(1,21):
+    if i%2==0:
+        s=s+i
+        print(i)
+print('sum of even number from 1 to 20 = ',s)
 """
+
 '''
 
-#7.Count numbers divisible by 3 from 1 to 50'''
-
+#7.Count numbers divisible by 3 from 1 to 50
+s=0
+for i in range(1,51):
+    if i%3==0:
+        s=s+i
+        print(i)
+print('sum of even number from 1 to 50 = ',s)
+'''
 
 
 
@@ -123,9 +156,7 @@ for i in enumerate(word,start=1):
 
 '''
 #10.Count even and odd numbers in a list.
-num= [10, 15, 22, 31, 40, 51]
-
-'''
+num= [10, 15, 22, 31, 40, 
 even=0
 odd=0
 num= [10, 15, 22, 31, 40, 51]
@@ -136,26 +167,81 @@ for i in num:
         odd=odd+1
 print(even)
 print(odd)
+'''
 
 '''
 
-#11.wap to print repeated char and count the same
-s="helloworld"
+#11.wap to print repeated char and count the same'''
+'''s="helloworld"
+count=0
+rev=' '
+for i in s:
+    if s.count(i)>1:
+        count=count+1
+          if i not in rev:
+            
+            rev=rev+i
+            print(count,i)
 
+'''
+            
 
+'''
+for i in s:
+    if s.count(i) > 1 and s.index(i) == s.index(i):
+        if i not in s[:s.index(i)]:
+            print(i, s.count(i))'''
+'''
 #12.Grouping flowers and animals separately
+flower=[]
+animals=[]
 items=["lotus-flower","lilly-flower","cat-animal","dog-animal","sunflower-flower"]
-
-
+for i in items:
+    
+    if  i.endswith('-flower'):
+         flower.append(i)
+    else:
+       animals.append(i)
+print(flower)
+print(animals)
+'''
+'''
 #13.filter only character except digits
 s="Think456 and 123answers it789 guys "
-
+for i in s:
+    if i.isalpha():
+        print(i,end=' ')
+        
+for i in s.split():
+    if i.isalpha():
+        print(i,end=' ')
+'''
+'''
 #14.replace whitespaces with newline char in the below string
-s="hello world welcome to python"
 
+s = "hello world welcome to python"
+
+for i in s:
+    if i == ' ':
+        print('\n', end='')
+    else:
+        print(i, end='')
+        '''
+'''
 #15.replace all vowels with *
 s="hello world welcome to python"
-'''
+
+s="hello world welcome to python"
+a=' '
+for i in s:
+    if i in'aeiouAEIOU':
+        
+        a=a+'*'
+    else:
+        a=a+i
+print(a)
+    '''    
+
 
 '''
 
